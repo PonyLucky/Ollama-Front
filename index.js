@@ -11,7 +11,9 @@ function createWindow() {
         webPreferences: {
             nodeIntegration: true
         },
-        autoHideMenuBar: true
+        autoHideMenuBar: true,
+        icon: path.join(__dirname, 'img', 'icon.png'),
+        title: 'Ollama Frontend'
     })
 
     win.loadURL(url.format({
@@ -23,7 +25,7 @@ function createWindow() {
     win.on('closed', () => {
         win = null
     })
-};
+}
 
 app.on('ready', createWindow);
 

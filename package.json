@@ -71,12 +71,55 @@
   },
   "scripts": {
     "start": "electron .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "electron-builder",
+    "postinstall": "electron-builder install-app-deps"
   },
-  "author": "",
+  "author": "PonyLucky",
   "license": "ISC",
-  "description": "",
+  "description": "Frontend for Ollama in Electron",
   "devDependencies": {
-    "electron": "^29.2.0"
+    "electron": "^29.2.0",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "Ollama-Front",
+    "productName": "Ollama Front",
+    "icon": "img/icon.png",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "img/**/*",
+      "node_modules/**/*",
+      "script/**/*",
+      "style/**/*",
+      "vendors/**/*",
+      "index.html",
+      "index.js"
+    ],
+    "linux": {
+      "target": [
+        "AppImage",
+        "tar.gz"
+      ],
+      "category": "Utility"
+    },
+    "mac": {
+      "target": [
+        "dmg",
+        "zip"
+      ]
+    },
+    "win": {
+      "target": [
+        "nsis",
+        "zip"
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true
+    }
   }
 }
