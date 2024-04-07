@@ -12,15 +12,19 @@ class Ask {
             event.preventDefault();
             self.askQuestion();
         };
-        this.ask.querySelector('textarea').oninput = function(e) {
-            self._autoGrow(this);
-        };
         // If keys are Ctrl + Enter, then submit the form
         window.onkeydown = function(event) {
             if (event.ctrlKey && event.key === 'Enter') {
                 self.askQuestion();
             }
         }
+        // Auto grow the textarea when typing
+        let textarea = this.ask.querySelector('textarea');
+        textarea.oninput = function(e) {
+            self._autoGrow(this);
+        };
+        // Focus on the textarea
+        textarea.focus();
     }
 
     _autoGrow(element) {
