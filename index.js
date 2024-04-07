@@ -10,7 +10,8 @@ function createWindow() {
         height: 600,
         webPreferences: {
             nodeIntegration: true
-        }
+        },
+        autoHideMenuBar: true
     })
 
     win.loadURL(url.format({
