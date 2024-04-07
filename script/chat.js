@@ -11,6 +11,19 @@ class Chat {
         this.addMessage('ai', 'Hello! How can I help you today?', true);
     }
 
+    _autoScrollBar(element) {
+        let lastMessage = element.querySelectorAll('.chat-container');
+        if (lastMessage.length === 0) return;
+        lastMessage = lastMessage[lastMessage.length - 1];
+        let lastHeight = lastMessage.offsetTop + lastMessage.clientHeight;
+        if (lastHeight > window.innerHeight) {
+            console.log('Scrolling');
+            element.classList.add('scroll');
+        } else {
+            element.classList.remove('scroll');
+        }
+    }
+
     getMessages() {
         let messages = [];
         let chat = this.chat.children;
@@ -27,6 +40,7 @@ class Chat {
         while (this.chat.firstChild) {
             this.chat.removeChild(this.chat.firstChild);
         }
+        this._autoScrollBar(this.chat);
     }
 
     removeMessage(element) {
@@ -145,6 +159,7 @@ class Chat {
         // Append to chat
         this.chat.appendChild(html);
         this._scrollToBottom();
+        this._autoScrollBar(this.chat);
     }
 
     updateMessage(element, message) {
@@ -189,6 +204,7 @@ class Chat {
             msgDiv.appendChild(pMsg);
         }
         this._scrollToBottom();
+        this._autoScrollBar(this.chat);
     }
 
     getWaitingMessage() {

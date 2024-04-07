@@ -5,6 +5,9 @@
     outline: none;
     box-shadow: none;
     border-style: none;
+    /* scroll */
+    scroll-behavior: smooth;
+    scrollbar-width: none;
 }
 
 body {
@@ -17,4 +20,10 @@ body {
     --color-text: #000000;
     --color-code: #282a36;
     --color-gradient: linear-gradient(128deg, var(--color-secondary) 0%, var(--color-tertiary) 100%);;
+}
+
+.scroll {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scrollbar-width: thin;
 }

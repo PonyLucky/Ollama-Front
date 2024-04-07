@@ -24,8 +24,14 @@ class Ask {
     }
 
     _autoGrow(element) {
-        element.style.height = '5px';
         element.style.height = (element.scrollHeight) + 'px';
+        let viewHeight = element.clientHeight;
+        if (parseInt(element.style.height) > viewHeight) {
+            console.log('Scrolling');
+            element.classList.add('scroll');
+        } else {
+            element.classList.remove('scroll');
+        }
     }
 
     isAsking() {
