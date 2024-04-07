@@ -1,0 +1,56 @@
+.ask {
+    width: 100%;
+    padding: 1em 2em;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ask-form {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    width: 100%;
+    max-width: 1000px;
+    background-color: white;
+    border-radius: 25px;
+}
+
+.ask-text {
+    width: 100%;
+    max-width: 1000px;
+    height: 55px;
+    min-height: 55px;
+    max-height: 50vh;
+    padding: 0.40em 1em;
+    background-color: white;
+    border-radius: 25px;
+    font-size: 16pt;
+    word-break: break-all;
+    resize: none;
+}
+
+.ask-send {
+    margin: 0.4em 0.4em 0.4em 0;
+    width: 50px;
+    height: 50px;
+    background-color: var(--color-tertiary);
+    transition: background-color 0.2s;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.ask-send:hover {
+    background-color: var(--color-tertiary-dark);
+}
+
+.ask-send img {
+    width: 25px;
+    height: 25px;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ollama Front</title>
+    <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="style/chat.css">
+    <link rel="stylesheet" href="style/ask.css">
+    <link rel="stylesheet" href="vendors/highlightjs/dracula.css">
+</head>
+<body>
+    <!--Chat-->
+    <section id="chat" class="chat">
+    </section>
+    <!--Input-->
+    <section class="ask">
+        <form id="ask" class="ask-form">
+            <textarea class="ask-text" placeholder="Type a message..."></textarea>
+            <button class="ask-send"><img src="img/send.svg" alt="Send"></button>
+        </form>
+    </section>
+    <!-- Scripts -->
+    <script src="vendors/highlightjs/highlight.min.js"></script>
+    <script src="script/chat.js"></script>
+    <script src="script/ollama.js"></script>
+    <script src="script/ask.js"></script>
+    <script src="script/index.js"></script>
+</body>
+</html>

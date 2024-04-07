@@ -1,0 +1,20 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-shadow: none;
+    border-style: none;
+}
+
+body {
+    /* Colors */
+    --color-primary: #ffffff;
+    --color-secondary: #e1832d;
+    --color-secondary-dark: #c16b1e;
+    --color-tertiary: #37b5d1;
+    --color-tertiary-dark: #2f9dbf;
+    --color-text: #000000;
+    --color-code: #282a36;
+    --color-gradient: linear-gradient(128deg, var(--color-secondary) 0%, var(--color-tertiary) 100%);;
+}
