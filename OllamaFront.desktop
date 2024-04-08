@@ -1,0 +1,9 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Type=Application
+Terminal=false
+Exec="$HOME/.local/share/OllamaFront/OllamaFront.AppImage"
+Name=Ollama Front
+Icon=$HOME/.local/share/OllamaFront/icon.png
