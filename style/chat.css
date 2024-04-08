@@ -65,6 +65,7 @@ pre.chat-message-text {
     border-radius: 20px;
     font-size: 12pt;
     overflow-y: auto;
+    scrollbar-width: auto;
     word-break: break-all;
 }
 
