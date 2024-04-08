@@ -4,14 +4,23 @@
 
 This is a frontend project in electron to use your local LLM models in a GUI via ollama.
 
-## For the User
+## Shortcuts
+
+- `Ctrl + Enter` to send the message. There are protections to avoid sending empty messages and when one is already
+processing. Don't worry about faulty peripherals. So you can enter a new line with `Enter` or `Shift + Enter`.
+- `Ctrl + R` to reset the history (clicking on a model does the same thing).r
+- `Ctrl + Q` (Linux/Mac) or `Alt + F4` (Windows) to close the app.
+
+## Install
+
+### For users
 
 Download the latest release from the [releases](https://github.com/PonyLucky/Ollama-Front/releases).
 If you don't see a release for your platform, you can build it yourself. See the [For the Dev](#for-the-dev) section.
 
 I did not take the time to build it for Windows (don't have a Apple device yet). Please open an issue if you need it.
 
-### On Linux
+#### On Linux
 
 If `wget` is not installed, you can install it with:
 - `sudo apt install wget` on Debian based OS (Ubuntu, Mint).
@@ -40,7 +49,7 @@ chmod +x ~/.local/share/applications/OllamaFront.desktop
 echo "Please log out and log in again to see the changes."
 ````
 
-## For the Dev
+### For devs
 
 This project needs [Node.js](https://nodejs.org/) to run. *I use Node v20.10.0.*
 
@@ -48,13 +57,13 @@ This project needs [Node.js](https://nodejs.org/) to run. *I use Node v20.10.0.*
 npm install
 ```
 
-### Usage
+#### Usage
 
 ```bash
 npm start
 ```
 
-### Build
+#### Build
 
 ```bash
 npm run build
