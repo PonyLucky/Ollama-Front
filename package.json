@@ -99,8 +99,7 @@
     ],
     "linux": {
       "target": [
-        "AppImage",
-        "tar.gz"
+        "AppImage"
       ],
       "category": "Utility"
     },
