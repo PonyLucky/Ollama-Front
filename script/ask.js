@@ -36,7 +36,7 @@ class Ask {
         }
         heights.push(vh);
 
-        // Get the number of lines in the textarea
+        // Grow along with the number of lines
         let lines = element.value.split('\n').length;
         let height = 0;
         if (lines > 1) {
@@ -46,6 +46,16 @@ class Ask {
             } else {
                 height = heights[lines-1];
                 element.classList.remove('scroll');
+            }
+        }
+        element.style.height = height + 'px';
+
+        // Grow along with the content in one line
+        let currentHeight = element.scrollHeight;
+        for (let i = 0; i < heights.length; i++) {
+            if (currentHeight <= heights[i]) {
+                height = heights[i];
+                break;
             }
         }
         element.style.height = height + 'px';
