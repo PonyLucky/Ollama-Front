@@ -107,7 +107,7 @@ class Chat {
                 if (msg.startsWith('```')) {
                     code = !code;
                     if (code === false) {
-                        let pMsg = document.createElement('p');
+                        let pMsg = document.createElement('pre');
                         pMsg.classList.add('chat-message-text');
                         pMsg.textContent = codeBuffer.join('\n');
                         divMsg.appendChild(pMsg);
