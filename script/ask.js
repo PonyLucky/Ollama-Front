@@ -21,21 +21,34 @@ class Ask {
         // Auto grow the textarea when typing
         let textarea = this.ask.querySelector('textarea');
         textarea.oninput = function(e) {
-            self._autoGrow(this);
+            self._autoGrow(e.target);
         };
         // Focus on the textarea
         textarea.focus();
     }
 
     _autoGrow(element) {
-        element.style.height = (element.scrollHeight) + 'px';
-        let viewHeight = element.clientHeight;
-        if (parseInt(element.style.height) > viewHeight) {
-            console.log('Scrolling');
-            element.classList.add('scroll');
-        } else {
-            element.classList.remove('scroll');
+        // Create array of heights for the textarea
+        let heights = [55, 75];
+        let vh = window.innerHeight / 2;
+        while (heights[heights.length - 1] < vh) {
+            heights.push(heights[heights.length - 1] + 29);
         }
+        heights.push(vh);
+
+        // Get the number of lines in the textarea
+        let lines = element.value.split('\n').length;
+        let height = 0;
+        if (lines > 1) {
+            if (lines > heights.length - 2) {
+                height = element.scrollHeight;
+                element.classList.add('scroll');
+            } else {
+                height = heights[lines-1];
+                element.classList.remove('scroll');
+            }
+        }
+        element.style.height = height + 'px';
     }
 
     isAsking() {
