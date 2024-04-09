@@ -33,7 +33,7 @@ Here is a script to install the app in your system. You can paste it in your ter
 # Create the tree
 mkdir -p ~/.local/share/OllamaFront
 # Download the AppImage
-wget https://github.com/PonyLucky/Ollama-Front/releases/download/v1.1/OllamaFront.AppImage \
+wget https://github.com/PonyLucky/Ollama-Front/releases/download/v1.2/OllamaFront.AppImage \
     -O ~/.local/share/OllamaFront/OllamaFront.AppImage
 # Make it executable
 chmod +x ~/.local/share/OllamaFront/OllamaFront.AppImage
