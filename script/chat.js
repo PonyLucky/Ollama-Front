@@ -103,7 +103,7 @@ class Chat {
             let codeBuffer = [];
             let code = false;
             for (let i = 0; i < msgList.length; i++) {
-                let msg = msgList[i].trim();
+                let msg = msgList[i];
                 if (msg.startsWith('```')) {
                     code = !code;
                     if (code === false) {
@@ -178,7 +178,7 @@ class Chat {
         let codeBuffer = [];
         let code = false;
         for (let i = 0; i < msgList.length; i++) {
-            let msg = msgList[i].trim();
+            let msg = msgList[i];
             if (msg.startsWith('```')) {
                 code = !code;
                 if (code === false) {
